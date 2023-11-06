@@ -14,6 +14,9 @@ import {SignUpComponent} from "./auth/sign-up/sign-up.component";
 import {UserComponent} from "./user/user.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { DoctorComponent } from './doctor/doctor.component';
+import { PatientComponent } from './patient/patient.component';
 
 @NgModule({
   imports: [
@@ -34,6 +37,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     NavComponent,
     SidebarComponent,
     UserComponent,
+    AppointmentComponent,
+    DoctorComponent,
+    PatientComponent,
   ],
   bootstrap: [AppComponent]
 })
