@@ -10,9 +10,9 @@ export class SidebarComponent {
   public sidebarLinks = [
     {route: '/home', imgURL: '/assets/assets/home.svg', name: 'Home'},
     {route: '/user', imgURL: '/assets/assets/user.svg', name: 'Profile'},
-    {route: '/card', imgURL: '/assets/assets/calendar.svg', name: 'Appointments'},
-    {route: '/card', imgURL: '/assets/assets/doctors.svg', name: 'Doctors'},
-    {route: '/card', imgURL: '/assets/assets/members.svg', name: 'Patients'},
+    {route: '/appointment', imgURL: '/assets/assets/calendar.svg', name: 'Appointments'},
+    {route: '/doctor', imgURL: '/assets/assets/doctors.svg', name: 'Doctors'},
+    {route: '/patient', imgURL: '/assets/assets/members.svg', name: 'Patients'},
 
   ];
 
