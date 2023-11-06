@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AuthenticationService} from "../authentication.service";
 import {animate, style, transition, trigger} from "@angular/animations";
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-nav',
@@ -22,6 +23,8 @@ export class NavComponent {
   showModal: boolean = false
   showToast: boolean = false;
   isDropdownVisible = false;
+  registerForm!: FormGroup;
+
 
   radioButtons = [
     {

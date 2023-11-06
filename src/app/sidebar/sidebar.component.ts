@@ -8,10 +8,14 @@ import {AuthenticationService} from "../authentication.service";
 })
 export class SidebarComponent {
   public sidebarLinks = [
-    {route: '/home', label: 'Home', imgURL: '/assets/assets/home.svg'},
-    {route: '/user', label: 'User', imgURL: '/assets/assets/user.svg'},
-    {route: '/card', label: 'Card', imgURL: '/assets/assets/store.svg'},
+    {route: '/home', imgURL: '/assets/assets/home.svg', name: 'Home'},
+    {route: '/user', imgURL: '/assets/assets/user.svg', name: 'Profile'},
+    {route: '/card', imgURL: '/assets/assets/calendar.svg', name: 'Appointments'},
+    {route: '/card', imgURL: '/assets/assets/doctors.svg', name: 'Doctors'},
+    {route: '/card', imgURL: '/assets/assets/members.svg', name: 'Patients'},
+
   ];
+
 
   constructor(private authService: AuthenticationService) {
   }

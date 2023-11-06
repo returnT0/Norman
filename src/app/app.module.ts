@@ -13,6 +13,7 @@ import {LandingComponent} from "./landing/landing.component";
 import {SignUpComponent} from "./auth/sign-up/sign-up.component";
 import {UserComponent} from "./user/user.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTooltipModule
   ],
   declarations: [
     AppComponent,
