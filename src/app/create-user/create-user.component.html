@@ -1,0 +1,111 @@
+<form>
+  <img alt="waving_man" class="z-10 fixed w-[9em] bottom-[10%] right-[14%]"
+       src="/assets/people/waving_man.png">
+  <img alt="waving_man" class="z-10 fixed w-[17em] bottom-[-25%] left-[4%] rotate-[25deg]"
+       src="/assets/people/hug_woman.png">
+  <div class="grid gap-6 mb-6 md:grid-cols-3">
+    <div>
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+      <input type="text" id="first_name"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="John"
+             required>
+    </div>
+    <div>
+      <label for="last_name" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+      <input type="text" id="last_name"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="Doe"
+             required>
+    </div>
+    <div>
+      <label for="insurance_number" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Insurance number</label>
+      <input type="text" id="insurance_number"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="333"
+             required>
+    </div>
+    <div>
+      <label for="phone" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+      <input type="tel" id="phone"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="123-45-678"
+             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+             required>
+    </div>
+    <div>
+      <label for="office number" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Office
+        number</label>
+      <input type="text" id="office number"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="123" required>
+    </div>
+    <div>
+      <label for="role" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Role</label>
+      <button
+        (click)="toggleDropdown()"
+        class="bg-gray-50 border border-gray-300 text-gray-700 rounded-2xl text-sm w-full p-2.5 justify-start inline-flex items-center"
+        id="dropdownRadioButton"
+        type="button">
+        {{ selectedOption || 'Role...' }}
+        <svg aria-hidden="true" class="w-2.5 h-2.5 ml-2.5" fill="none" viewBox="0 0 10 6"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="m1 1 4 4 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2"/>
+        </svg>
+      </button>
+
+      <!-- Dropdown menu -->
+      <div
+        *ngIf="isDropdownVisible"
+        @fadeInOut
+        class="w-full bg-slate-100 divide-gray-100 rounded-2xl shadow-lg mt-2"
+        id="dropdownDefaultRadio">
+        <ul aria-labelledby="dropdownRadioButton"
+            class="p-3 space-y-3 text-sm text-gray-700">
+          <li *ngFor="let radio of radioButtons">
+            <div class="flex items-center">
+              <input
+                (change)="updateSelection(radio.label)"
+                [(ngModel)]="selectedOption"
+                [id]="radio.id"
+                [value]="radio.label"
+                id="role"
+                class="w-4 h-4 text-fuchsia-400 bg-gray-50 border-gray-300 focus:ring-fuchsia-400 focus:ring-2"
+                name="default-radio"
+                type="radio">
+              <label [for]="radio.id"
+                     class="cursor-pointer ml-2 text-sm font-medium">{{radio.label}}</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mb-6">
+    <label for="email" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+    <input type="email" id="email"
+           class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+           placeholder="john.doe@company.com"
+           required>
+  </div>
+  <div class="mb-6">
+    <label for="password" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+    <input type="password" id="password"
+           class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+           placeholder="•••••••••"
+           required>
+  </div>
+  <div class="mb-8">
+    <label for="confirm_password" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Confirm
+      password</label>
+    <input type="password" id="confirm_password"
+           class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+           placeholder="•••••••••" required>
+  </div>
+  <button type="submit"
+          class="w-full text-base-medium text-white bg-indigo-400 border-2 border-indigo-400 rounded-3xl py-2 shadow-xl active:bg-amber-300 active:border-amber-300">
+    Submit
+  </button>
+</form>
+

@@ -1,16 +1,18 @@
 <div *ngIf="!isSignedIn">
-  <img alt="waving_man" class="z-40 fixed w-[19em] bottom-[20%] left-[9%] -rotate-45"
+  <img alt="waving_man" class="z-10 fixed w-[15em] bottom-[20%] left-[3.5%] -rotate-45"
        src="/assets/people/glad_to_see.png">
+  <img alt="waving_man" class="z-10 fixed w-[11em] bottom-[20%] right-[4%] rotate-[20deg]"
+       src="/assets/people/orange-skirt.png">
 
 
-  <div class="relative bg-gray-100 rounded-3xl overflow-hidden z-50 shadow-md">
+  <div class="relative bg-gray-100 rounded-3xl overflow-hidden z-20 shadow-md">
 
     <div class="absolute inset-0 bg-cover bg-center"
          style="background-image: url('/assets/bg_signup.jpg'); filter: blur(1px);"></div>
 
     <div class="absolute inset-0 bg-gray-500 opacity-50"></div>
 
-    <div class="py-5 px-12 c mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-2 lg:gap-16 relative">
+    <div class="py-8 px-12 mx-auto max-w-screen-xl grid grid-cols-2 gap-2 relative">
       <div class="flex flex-col justify-center">
         <h1
           class="mb-4 text-heading2-semibold font-extrabold tracking-tight leading-none text-gray-50 z-2 md:text-5xl lg:text-6xl dark:text-white">
@@ -93,7 +95,7 @@
             <button (click)="signIn()" [routerLink]="['/user']"
                     class="w-full bg-gradient-to-l from-indigo-400 to-pink-main text-white text-base-medium rounded-3xl shadow-md py-2"
                     type="submit">
-              Sign in
+              Sign up
             </button>
             <div class="text-sm font-medium text-gray-500">
               Already have an account?

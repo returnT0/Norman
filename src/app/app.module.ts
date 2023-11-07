@@ -17,6 +17,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { PatientComponent } from './patient/patient.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,7 @@ import { PatientComponent } from './patient/patient.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatTooltipModule
+    MatTooltipModule,
   ],
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { PatientComponent } from './patient/patient.component';
     AppointmentComponent,
     DoctorComponent,
     PatientComponent,
+    CreateUserComponent,
   ],
   bootstrap: [AppComponent]
 })

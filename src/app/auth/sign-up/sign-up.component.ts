@@ -13,6 +13,7 @@ export class SignUpComponent {
   constructor(private authService: AuthenticationService) {
   }
 
+
   get isSignedIn(): boolean {
     return this.authService.isUserSignedIn();
   }

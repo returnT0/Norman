@@ -8,6 +8,7 @@ import {UserComponent} from "./user/user.component";
 import {DoctorComponent} from "./doctor/doctor.component";
 import {PatientComponent} from "./patient/patient.component";
 import {AppointmentComponent} from "./appointment/appointment.component";
+import {CreateUserComponent} from "./create-user/create-user.component";
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'appointment', component: AppointmentComponent},
   {path: 'patient', component: PatientComponent},
   {path: 'doctor', component: DoctorComponent},
+  {path: 'create-user', component: CreateUserComponent},
 
 ];
 
