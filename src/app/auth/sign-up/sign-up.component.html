@@ -93,14 +93,15 @@
               </div>
             </div>
             <button (click)="signIn()" [routerLink]="['/user']"
-                    class="w-full bg-gradient-to-l from-indigo-400 to-pink-main text-white text-base-medium rounded-3xl shadow-md py-2"
+                    class="w-full bg-gradient-to-l from-indigo-400/80 to-pink-main/60 text-white text-base-medium rounded-3xl shadow-md py-2 active:bg-pink-main/80"
                     type="submit">
               Sign up
             </button>
             <div class="text-sm font-medium text-gray-500">
               Already have an account?
               <a [routerLink]="['/sign-in']"
-                 class="text-base-medium hover:text-indigo-400 hover:underline">Sign in</a>
+                 class="px-3 py-1 text-xs text-amber-500 rounded-3xl bg-amber-200/40 border-2 border-amber-300/10 shadow-sm active:bg-orange-200">
+                Sign in</a>
             </div>
           </form>
         </div>

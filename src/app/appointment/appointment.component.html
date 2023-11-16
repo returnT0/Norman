@@ -1,1 +1,64 @@
-<p>appointment works!</p>
+<form>
+  <h2 class="text-heading2-semibold font-medium text-gray-800 mb-6">Make an appointment</h2>
+  <img alt="waving_man" class="z-10 fixed w-[13em] bottom-[-25%] right-[4%]"
+       src="/assets/people/thumbsup_person.png">
+  <img alt="waving_man" class="z-10 fixed w-[16em] bottom-[-25%] left-1/4"
+       src="/assets/people/glad_to_see.png">
+  <img alt="waving_man" class="z-10 fixed w-[10.5em] bottom-[-25%] right-1/4"
+       src="/assets/people/granny.png">
+
+  <img alt="waving_man" class="z-10 fixed w-[17em] bottom-[-25%] left-[4%] rotate-[25deg]"
+       src="/assets/people/hug_woman.png">
+  <div class="grid gap-6 mb-6 md:grid-cols-4">
+    <div>
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+      <input type="text" id="first_name"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="John"
+             required>
+    </div>
+    <div>
+      <label for="last_name" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+      <input type="text" id="last_name"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="Doe"
+             required>
+    </div>
+    <div>
+      <label for="date" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Date</label>
+      <input type="date" id="date"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="123-45-678"
+             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+             required>
+    </div>
+    <div>
+      <label for="time" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Time</label>
+      <input type="time" id="time"
+             class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+             placeholder="123-45-678"
+             pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+             required>
+    </div>
+  </div>
+  <div class="mb-6">
+    <label for="email" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+    <input type="email" id="email"
+           class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+           placeholder="john.doe@company.com"
+           required>
+  </div>
+  <div class="mb-6">
+    <label for="phone" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+    <input type="tel" id="phone"
+           class="bg-gray-50 border border-gray-300 text-gray-700 placeholder-gray-400 text-sm rounded-2xl focus:ring-pink-500 focus:ring-2 focus:border-none block w-full p-2.5"
+           placeholder="123-45-678"
+           pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+           required>
+  </div>
+  <button type="submit"
+          class="w-full text-base-medium text-pink-500 bg-pink-300/40 border-2 border-pink-300/40 rounded-3xl py-2 shadow-xl active:bg-pink-400/40">
+    Book Appointment
+  </button>
+</form>
+
